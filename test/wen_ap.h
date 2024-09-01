@@ -77,7 +77,7 @@ void www_save_wifi(){
       preferences.putString("ssid", ssid);
       preferences.putString("pwd", pwd);
       preferences.end();
-      digitalWrite(ledPin, HIGH); //打开LED
+      digitalWrite(ledPin, HIGH); //关闭LED
       return;
     }else{
       delay(500);
