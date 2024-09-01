@@ -57,7 +57,6 @@ void www_getList(){
 
 //  尝试连接并保存WiFi信息
 void www_save_wifi(){
-  int i = 0;
   ssid = web.arg("ssid");
   pwd = web.arg("pwd");
   Serial.println("开始连接");
@@ -135,7 +134,6 @@ void ap_init(){
   Serial.println("ssid: " + ssid);
   preferences.end();
   if(ssid!="null"){
-    int i = 0;
     WiFi.begin(ssid, pwd);
     for(size_t i = 0; i < 30; i++){
       if(WiFi.status() == WL_CONNECTED){
