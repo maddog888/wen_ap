@@ -76,6 +76,7 @@ void www_save_wifi(){
       preferences.putString("ssid", ssid);
       preferences.putString("pwd", pwd);
       preferences.end();
+      apstate = false;  //设置AP状态关闭
       digitalWrite(ledPin, HIGH); //关闭LED
       return;
     }else{
